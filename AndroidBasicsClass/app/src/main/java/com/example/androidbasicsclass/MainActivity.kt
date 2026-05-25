@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import com.example.androidbasicsclass.ui.loginview.view.LoginView
 import com.example.androidbasicsclass.ui.navigation.AppNavigation
 import com.example.androidbasicsclass.ui.theme.AndroidBasicsClassTheme
 
@@ -14,7 +15,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             AndroidBasicsClassTheme {
-                AppNavigation()
+                LoginView()
             }
         }
     }
