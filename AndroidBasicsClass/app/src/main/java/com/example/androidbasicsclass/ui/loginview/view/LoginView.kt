@@ -51,7 +51,7 @@ fun LoginView() {
     ) {
         Image(
             painter = painterResource(id = R.drawable.ulsalogo),
-            contentDescription = stringResource(R.string.login_image_desc),
+            contentDescription = "Logo Pawly",
             modifier = Modifier
                 .size(150.dp)
                 .clip(CircleShape)
