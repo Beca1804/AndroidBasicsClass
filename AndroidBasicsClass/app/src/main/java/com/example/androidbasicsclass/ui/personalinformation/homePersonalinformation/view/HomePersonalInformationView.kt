@@ -1,4 +1,4 @@
-package com.example.androidbasicsclass.ui.personalinformation.homePersonalInformation.view
+package com.example.androidbasicsclass.ui.personalinformation.homePersonalinformation.view
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize

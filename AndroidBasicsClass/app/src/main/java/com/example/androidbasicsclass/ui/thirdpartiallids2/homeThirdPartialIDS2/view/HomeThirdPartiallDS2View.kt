@@ -1,27 +1,34 @@
 package com.example.androidbasicsclass.ui.thirdpartiallids2.homeThirdPartialIDS2.view
 
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
+import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.androidbasicsclass.ui.thirdpartiallids2.homeThirdPartialIDS2.viewmodel.HomeThirdPartialIDS2ViewModel
+import androidx.compose.ui.unit.dp
 
-/**
- * Screen composable for the Third Partial IDS2 section.
- * Displays centered placeholder text driven by [HomeThirdPartialIDS2ViewModel].
- * @param homeViewModel ViewModel providing state for this screen.
- */
 @Composable
 fun HomeThirdPartialIDS2View(
-    homeViewModel: HomeThirdPartialIDS2ViewModel = viewModel()
+    onApiRequestClick: () -> Unit
 ) {
-    Box(
+    Column(
         modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(text = "Third Partial IDS2")
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Button(
+            onClick = onApiRequestClick
+        ) {
+            Text(text = "API Request")
+        }
     }
 }
