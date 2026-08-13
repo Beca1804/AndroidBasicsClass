@@ -22,6 +22,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.androidbasicsclass.ui.firstpartialpdm1.homeFirstPartialPDM1.view.HomeFirstPartialPDM1View
+import com.example.androidbasicsclass.ui.firstpartialpdm1.jetpackComposeExamples.view.JetPackComposeExamplesView
 import com.example.androidbasicsclass.ui.login.LoginScreen
 import com.example.androidbasicsclass.ui.personalinformation.homePersonalinformation.view.HomePersonalInformationView
 import com.example.androidbasicsclass.ui.secondpartialpdm1.homeSecondPartialPDM1.view.HomeSecondPartialPDM1View
@@ -151,6 +152,7 @@ fun TabsScreen(
             }
         }
     ) { innerPadding ->
+
         NavHost(
             navController = navController,
             startDestination = AppRoute.ThirdPartialIDS2.route,
@@ -163,7 +165,15 @@ fun TabsScreen(
             }
 
             composable(AppRoute.FirstPartialPDM1.route) {
-                HomeFirstPartialPDM1View()
+                HomeFirstPartialPDM1View(
+                    navigateToJetpackComposeExample = {
+                        navController.navigate("jetpack_compose_example")
+                    }
+                )
+            }
+
+            composable("jetpack_compose_example") {
+                JetPackComposeExamplesView()
             }
 
             composable(AppRoute.SecondPartialPDM1.route) {
